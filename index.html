@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <title>シューティングゲーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <div id="hud">
+      <div id="score">スコア: 0</div>
+      <div id="stage-display">ステージ 1</div>
+      <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
+    </div>
+    <div id="boss-hp-wrap" style="display:none">
+      <div id="boss-hp-label">BOSS HP</div>
+      <div id="boss-hp-bar-bg"><div id="boss-hp-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- ステージクリア演出 -->
+  <div id="stage-clear" style="display:none">
+    <div id="stage-clear-text"></div>
+  </div>
+
+  <!-- ボス登場アテンション -->
+  <div id="boss-attention" style="display:none">
+    <div id="boss-attention-inner">
+      <div id="boss-attention-icon">🚀</div>
+      <div id="boss-attention-title">⚠️ WARNING ⚠️</div>
+      <div id="boss-attention-msg">最終ボス「ダース・スター」出現！！</div>
+      <div id="boss-attention-sub">全砲台を集中攻撃せよ！</div>
+    </div>
+  </div>
+
+  <!-- ゲームクリア -->
+  <div id="game-clear" style="display:none">
+    <div id="game-clear-inner">
+      <div id="game-clear-icon">🏆</div>
+      <div id="game-clear-title">GAME CLEAR!</div>
+      <div id="game-clear-score"></div>
+      <button id="restart-btn" onclick="location.reload()">もう一度プレイ</button>
+    </div>
+  </div>
+
+  <audio id="hitSound" src="hit.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
